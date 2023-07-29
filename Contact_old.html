@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omni</title>
+    <!--<link rel="stylesheet" href="Contact.css">-->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand{
+    height: 80px;
+    width: 70px;
+}
+.container-fluid{
+    margin-top: 0;
+    background-color: #1e2024;
+}
+.navbar{
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+.btn{
+    width: 90px;
+    margin-right: 10px;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    
+    list-style: none;
+}
+nav ul li{
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+    color: #111;
+    background: #fff;
+}
+.main{
+    width: 100%;
+    background: url(images/bg_4.png);
+    background-position: center;
+    background-size: cover;
+    height: 87vh;
+}
+.container{
+  width: 100%;
+  height: 45vh;
+  display: grid;
+  
+}
+  
+.form-container{
+  
+  margin-left: 350px;
+  width: 30%;
+  margin-top: 10px;
+  height: 83vh;
+  display: grid;
+  grid-template-columns: 300px 500px;
+  grid-template-rows: 700px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+  column-gap: 20px;
+}
+.input-control{
+  width: 100%;
+  margin: 10px 0px 0px 50px;
+  position: relative;
+}
+form label{
+  color: white;
+  font-size: 20px;
+}
+form input , form input{
+  width: 80%;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid white;
+  padding: 10px 0;
+  font-size: 16px;
+  background-color: transparent;
+  color: white;
+}
+form button{
+  margin-top: 5px;
+  width: 80%;
+  padding: 10px 0;
+  background-color: white;
+  color: #ff7200;
+  font-size: 20px;
+  border-radius: 10px;
+}
+form button:hover{
+  background-color: #ff7200;
+  color: white;
+}
+@media(max-width: 857px){
+    
+  .container h1{
+      margin-top: 30px;
+  }
+
+  .form-container{
+      grid-template-columns: 900px;
+      grid-template-rows: 400px 800px; 
+      margin-left: 50px;
+      margin-top: 100px;
+  }
+
+  form{
+      margin-top: 120px;
+  }
+}
+   
+    
+</style>
+  </head>
+<body>
+      <nav class="navbar">
+        <div class="container-fluid">
+          <img class="navbar-brand" src="images/buslogo.png" alt="Bus logo">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+            <li><a href="#">View pass</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <button class="btn btn-outline-primary" type="submit"><a href="login.php" style="text-decoration: none; color: white;">Login</a></button>
+            <button class="btn btn-outline-primary" type="submit"><a href="Register.php" style="text-decoration: none; color: white;">Sign-up</a></button>
+          </form>
+        </div>
+      </nav>
+      <div class="main">
+
+        <div class="container">
+          <div class="form-container">
+            <form action="" onsubmit="send(); reset(); return false" style="height: 30px;">
+              <div class="input-control">
+                  <label for="">Name</label><br>
+                  <input type="text" placeholder="Enter Your Name" id="Name" required>
+                </div>
+                <div class="input-control">
+                  <label for="">Email</label><br>
+                  <input type="email" placeholder="Enter Your Email" id="Email" required>
+                </div>
+                <div class="input-control">
+                  <label for="">Contact-Number</label><br>
+                  <input type="number" placeholder="Enter Your Contact Number" id="Contact" required>
+                </div>
+                <div class="input-control">
+                  <label for="">Subject</label><br>
+                  <input type="text" placeholder="Enter Your Subject" id="Subject" required>
+                </div>
+                <div class="input-control">
+                  <label for="">Message</label><br>
+                  <input name="" id="message"  placeholder="Enter Your Message" required>
+                </div>
+                <div class="input-control">
+                  <button type="submit">submit</button>
+                 </div>
+              </form>
+            </div>
+          </div>
+        
+        </div>
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function send(){
+        let name = document.getElementById("Name").value; 
+        let email = document.getElementById("Email").value;
+        let contact = document.getElementById("Contact").value;
+        let subject = document.getElementById("Subject").value; 
+        let message = document.getElementById("message").value;
+
+        Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "leonelduke6@gmail.com",
+        Password : "DFE4B07EA0DFE56B2F1C6C79044D4DEAF250",
+        To : 'oomniticket@gmail.com',
+        From : "leonelduke6@gmail.com",
+        Subject : "Mail From Contact Form",
+        Body : "Name : " + name + "<br/> User Email : " + email + "<br/> Contact Number : " + contact + "<br/> Subject : " + subject + "<br/> User Message : " + message
+      }).then(
+        message => alert(message)
+        );
+      }
+      </script> 
+        
+         
+
+</body>
+</html>

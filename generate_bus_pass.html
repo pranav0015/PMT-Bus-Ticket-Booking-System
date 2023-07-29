@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generated Bus Pass</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <style>
+            body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: block;
+            background-image: url('bg_4.png');
+      background-size: cover;
+      background-position: center;
+             
+            
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .navbar-logo {
+            margin-right: 10px;
+            width: 70px;
+            height: 80px;
+        }
+
+        .navbar-items {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .navbar-items a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .navbar-items a:hover {
+            color: #2208e5; /* Change to desired hover color */
+        }
+
+        .navbar-buttons {
+            margin-left: 10px;
+        }
+
+        .navbar-buttons button {
+            background-color: #555;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .pass {
+      color: green;
+      font-weight: bold;
+      font-size: 40px;
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+    
+    
+    .bus-pass {
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: #fff;
+      max-width: 400px;
+      margin-left: 35%;
+      margin-top: 10%;
+    }
+    
+    h1 {
+       
+      text-align: center;
+      
+    }
+    
+    p {
+      margin-bottom: 10px;
+    }
+        
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        
+        <img style="width: 80px; height: 80px;" src="buslogo.png" alt="Logo">
+    
+    <div class="navbar-items">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Admin</a>
+        <a href="#">View Pass</a>
+    </div>
+    <div class="navbar-buttons">
+        <button type="button" class="btn btn-outline-primary">Login</button>
+        <button type="button" class="btn btn-outline-primary">Register</button>
+    </div>
+</div> 
+<div class="bus-pass">
+  <h1 style="margin-left: 10%; width: 80%;">Generated Bus Pass</h1>
+  
+  <p>Full Name: <span id="name"></span></p>
+  <p>Age: <span id="age"></span></p>
+  <p>Contact No: <span id="Contact"></span></p>
+  <p>Destination From: <span id="destinationFrom"></span></p>
+  <p>Destination To: <span id="destinationTo"></span></p>
+  <p class="pass">Approved</p>
+</div>
+  
+  
+  <script>
+    // Retrieve the form data from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const age = urlParams.get('age');
+    const Contact = urlParams.get('Contact');
+    const destinationFrom = urlParams.get('destinationFrom');
+    const destinationTo = urlParams.get('destinationTo');
+    
+    // Set the values in the HTML
+    document.getElementById('name').textContent = name;
+    document.getElementById('age').textContent = age;
+    document.getElementById('Contact').textContent = Contact;
+    document.getElementById('destinationFrom').textContent = destinationFrom;
+    document.getElementById('destinationTo').textContent = destinationTo;
+  </script>
+</body>
+</html>

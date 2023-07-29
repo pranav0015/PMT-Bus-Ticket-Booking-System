@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand{
+    height: 80px;
+    width: 70px;
+}
+.container-fluid{
+    margin-top: 0;
+    background-color: #1e2024;
+}
+.navbar{
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+.btn{
+    width: 90px;
+    margin-right: 10px;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+    color: #111;
+    background: #fff;
+}
+.main{
+    margin-top: -40px;
+    width: 100%;
+    background: url(images/bg_4.png);
+    background-position: center;
+    background-size: cover;
+    height: 87.3vh;
+}
+.about-1{
+    height: 30px;
+    margin: 30px;
+    padding: 5px;
+}
+
+.about-1 p{
+    text-align: center;
+    padding: 3px;
+    color: #fff;
+}
+
+
+.about-item{
+    height: 320px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 80px 30px;
+    box-shadow: 0 0 9px rgba(0,0,0.6);
+}
+
+
+.about-item i{
+    font-size: 43px;
+    margin: 0;
+}
+
+
+.about-item h3{
+    margin-top: -50px;
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+
+.about-item hr{
+    width: 46px;
+    height: 0px;
+    background-color: #5fbff9;
+    margin: 0 auto;
+    border: none;
+    text-align: center;
+}
+
+.about-item:hover{
+    background-color: #5fbff9;
+}
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p{
+    color: #fff;
+}
+.about-item:hover hr{
+    background-color: #fff;
+}
+
+.about-item:hover i{
+    transform: translateY(-20px);
+}
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover hr{
+    transition: all 400ms ease-in-out;
+}
+footer{
+    margin-top: 42px;
+    background: #212226;
+    padding: 20px;
+}
+footer p{
+    margin-top: 15px;
+    color: #fff;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omni</title>
+    <link rel="stylesheet" href="Book.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container-fluid">
+          <img class="navbar-brand" src="images/buslogo.png" alt="Bus logo">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Admin</a></li>
+            <li><a href="#">View pass</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <!--<button class="btn btn-outline-primary" type="submit"><a style="text-decoration: none; color: white;">Login</a></button>-->
+            <button class="btn btn-outline-primary" type="submit"><a href="logout.php" style="text-decoration: none; color: white;">Log Out</a></button>
+          </form>
+        </div>
+      </nav>
+        <div class="main">
+            <div class="form" style="height: 500px; margin-top: -20px;">
+                <form>
+                  <h2 style="margin-left: 200px;" >Ticket Booking Form</h2>
+                  <p style="margin-top: 5px;">Please fill out the form to book your ticket:</p>
+                  
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+                  
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                  
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" name="phone" required>
+                  
+                  <label for="date">Date:</label>
+                  <input type="date" id="date" name="date" required>
+                  <hr style="color: brown; height: 10px; width: 50%; margin-left: 350px; margin-top: 70px;"/>
+                  <label for="destination">Destination from:</label>
+                  <select id="destination" name="destination">
+                    <option value="">Select Destination</option>
+                    <option value="New York">Alandi</option>
+                    <option value="London">Bhosari</option>
+                    <option value="Paris">Dehu Phata</option>
+                    
+                  </select>
+                  
+                  <label for="destination">Destination to:</label>
+                  <select id="destination" name="destination">
+                    <option value="">Select Destination</option>
+                    <option value="New York">Alandi</option>
+                    <option value="London">Bhosari</option>
+                    <option value="Paris">Dehu Phata</option>
+                  </select>
+                  
+                  <label for="number_of_tickets">Number of Tickets:</label> 
+                  <input type="number" id="number_of_tickets" name="number_of_tickets" min="1" required>
+                  <br>
+                  <input type="submit" value="Book Ticket" style="margin-left: 200px; background: #ff7200;">
+                </form>
+              </div>
+            </div>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>    
+</body>
+</html>
+
+
+
+

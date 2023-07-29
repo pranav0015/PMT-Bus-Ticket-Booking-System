@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omni</title>
+    <link rel="stylesheet" href="Contact.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+      <nav class="navbar">
+        <div class="container-fluid">
+          <img class="navbar-brand" src="images/buslogo.png" alt="Bus logo">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+            <li><a href="#">View pass</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <button class="btn btn-outline-primary" type="submit"><a href="Login.html" style="text-decoration: none; color: white;">Login</a></button>
+            <button class="btn btn-outline-primary" type="submit"><a href="sign-up.html" style="text-decoration: none; color: white;">Sign-up</a></button>
+          </form>
+        </div>
+      </nav>
+      <div class="main">
+
+        <div class="container">
+          <div class="form-container">
+            <form action="" onsubmit="send(); reset(); return false" style="height: 30px;">
+              <div class="input-control">
+                  <label for="">Name</label><br>
+                  <input type="text" placeholder="Enter Your Name" id="Name" required>
+                </div>
+                <div class="input-control">
+                  <label for="">Email</label><br>
+                  <input type="email" placeholder="Enter Your Email" id="Email" required>
+                </div>
+                <div class="input-control">
+                  <label for="">Contact-Number</label><br>
+                  <input type="number" placeholder="Enter Your Contact Number" id="Contact" required>
+                </div>
+                <div class="input-control">
+                  <label for="">Subject</label><br>
+                  <input type="text" placeholder="Enter Your Subject" id="Subject" required>
+                </div>
+                <div class="input-control">
+                  <label for="">Message</label><br>
+                  <input name="" id="message"  placeholder="Enter Your Message" required>
+                </div>
+                <div class="input-control">
+                  <button type="submit">submit</button>
+                 </div>
+              </form>
+            </div>
+          </div>
+        
+        </div>
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function send(){
+        let name = document.getElementById("Name").value; 
+        let email = document.getElementById("Email").value;
+        let contact = document.getElementById("Contact").value;
+        let subject = document.getElementById("Subject").value; 
+        let message = document.getElementById("message").value;
+
+        Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "oomnisystem@gmail.com",
+        Password : "8AE9F78BDAE29A70EC756AE3987221EC67E6",
+        To : 'oomnisystem@gmail.com',
+        From : document.getElementById("Email").value,
+        Subject : "Mail From Contact Form",
+        Body : "Name : " + name + "<br/> User Email : " + email + "<br/> Contact Number : " + contact + "<br/> Subject : " + subject + "<br/> User Message : " + message
+      }).then(
+        message => alert(message)
+        );
+      }
+      </script> 
+        
+         
+
+</body>
+</html>
